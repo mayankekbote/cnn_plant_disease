@@ -36,7 +36,8 @@ uploaded_file = st.file_uploader("📤 Upload a plant leaf image", type=["jpg", 
 if uploaded_file is not None:
     # Display image
     image_data = Image.open(uploaded_file)
-    st.image(image_data, caption="Uploaded Image", use_container_width=True)
+    st.image(image_data, caption="Uploaded Image", use_column_width=True)
+
 
     # Preprocess image
     img = image_data.resize((128, 128))
